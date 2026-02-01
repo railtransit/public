@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto URL Opener</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .container {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+        h1 {
+            margin-bottom: 1rem;
+        }
+        .url-list {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+        .url-list li {
+            margin: 0.5rem 0;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Opening URLs...</h1>
+        <p>The following URLs are being opened in new tabs:</p>
+        <ul class="url-list">
+            <li>🔗 grok.com</li>
+            <li>🔗 ernie.baidu.com</li>
+        </ul>
+        <p style="font-size: 0.9rem; margin-top: 2rem;">
+            Note: Please allow pop-ups for this page if prompted by your browser.
+        </p>
+    </div>
+
+    <script>
+        // Automatically open URLs when the page loads
+        window.onload = function() {
+            window.location.href = 'https://chat.openai.com/chat';
+            window.open('https://grok.com/', '_blank');
+            window.open('https://gemini.google.com/app', '_blank');
+            window.open('https://claude.ai/new', '_blank');
+            window.open('https://ernie.baidu.com/', '_blank');
+        };
+    </script>
+</body>
+</html>
